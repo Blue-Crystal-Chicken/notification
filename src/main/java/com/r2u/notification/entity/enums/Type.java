@@ -2,5 +2,6 @@ package com.r2u.notification.entity.enums;
 
 
 public enum Type {
-    VACATION_REQUEST
+    NEW_OFFER,
+    NEW_MENU,
 }
