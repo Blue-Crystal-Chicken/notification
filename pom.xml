@@ -101,11 +101,18 @@
 			<version>2.0.17</version>
 			<scope>compile</scope>
 		</dependency>
+		<!-- PostgreSQL driver (runtime) -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- Source: https://mvnrepository.com/artifact/com.h2database/h2 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>2.3.232</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
     		<groupId>org.springdoc</groupId>
@@ -116,6 +123,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+		</dependency>
+		<!-- Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.13.0</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
