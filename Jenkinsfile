@@ -25,8 +25,10 @@ pipeline {
 
         stage('Build Immagine Docker') {
             steps {
-                echo '=== Creazione immagine Docker ==='
-                sh 'docker build -t ghcr.io/blue-crystal-chicken/bcc-notification:latest .'
+                withCredentials([file(credentialsId: 'firebase-service-account', variable: 'FIREBASE_KEY')]) {
+                    sh 'cp $FIREBASE_KEY src/main/resources/serviceAccountKey.json'
+                    sh 'docker build --dns=8.8.8.8 --dns=8.8.4.4 -t ghcr.io/blue-crystal-chicken/bcc-notification:latest .'
+                }
             }
         }
 
